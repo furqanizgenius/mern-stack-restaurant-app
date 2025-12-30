@@ -1,16 +1,16 @@
 import express, { urlencoded } from "express"
 import cors from "cors"
 import dotenv from "dotenv"
-import { dbConnection } from "./database/dbConnection.js"
-import reservationRouter from "./routes/reservationRoute.js"
-import { errorMiddleware } from "./error/error.js"
+import { dbConnection } from "../database/dbConnection.js"
+import reservationRouter from "../routes/reservationRoute.js"
+import { errorMiddleware } from "../error/error.js"
 
 const app = express()
 dotenv.config({ path: './config/config.env' })
 
 app.use(cors({
     // origin: [process.env.FRONTEND_URL],
-    origin: ["https://deploy-mern-1whq.vercel.app"],
+    origin: ["https://furqanizgenius-mern-stack-restauran.vercel.app/"],
     methods: ["POST", "GET"],
     credentials: true,
 }))
