@@ -1,9 +1,9 @@
 import express from "express"
 import cors from "cors"
 import dotenv from "dotenv"
-import { dbConnection } from "../database/dbConnection.js"
-import reservationRouter from "../routes/reservationRoute.js"
-import { errorMiddleware } from "../error/error.js"
+import { dbConnection } from "./database/dbConnection.js"
+import reservationRouter from "./routes/reservationRoute.js"
+import { errorMiddleware } from "./error/error.js"
 
 const app = express()
 dotenv.config()
@@ -16,13 +16,13 @@ app.use(cors({
 }))
 
 app.get("/", (req, res) => {
-    res.status(200).send("Backend running on Vercel");
+    res.status(200).send("Backend running ...");
   });
   
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use('/v1/reservation', reservationRouter)
+app.use('api/v1/reservation', reservationRouter)
 
 dbConnection()
 
