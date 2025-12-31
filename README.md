@@ -20,7 +20,7 @@ BackendNode
 📦 Installation & Setup To get a local copy up and running, follow these steps:
 
     1. Clone the repository
-        git clone https://github.com/furqanizgenius/MERN-Project-Restaurant-App.git
+        git clone https://github.com/furqanizgenius/mern-stack-restaurant-app.git
 
     2. Setup Backend
         cd backend
